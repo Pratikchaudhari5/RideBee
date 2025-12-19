@@ -15,8 +15,8 @@
       </div>
 
       <!-- RIGHT SECTION: Form Fields -->
-      <div class="right-section">
-        <!-- Brand (full width) -->
+      <form class="right-section" [formGroup]="postCarForm" (ngSubmit)="postCar()">
+
         <div class="form-row full">
           <div class="form-item">
             <label>Brand</label>
@@ -25,8 +25,16 @@
             </select>
           </div>
         </div>
+ <div class="form-row full">
+          <div class="form-item">
+            <label>Car Name</label>
+            <input
+              type="text"
+              placeholder="Car Name"
+              formControlName="name"  />
+          </div>
+        </div>
 
-        <!-- Type + Transmission + Color -->
         <div class="form-row three">
           <div class="form-item">
             <label>Type</label>
@@ -50,19 +58,18 @@
           </div>
         </div>
 
-        <!-- Model Year + Price -->
         <div class="form-row two">
           <div class="form-item">
             <label>Model Year</label>
             <input type="number" placeholder="2025" formControlName="year" />
           </div>
+
           <div class="form-item">
             <label>Price</label>
             <input type="text" placeholder="₹ Price" formControlName="price" />
           </div>
         </div>
 
-        <!-- Description -->
         <div class="form-row full">
           <div class="form-item">
             <label>Description</label>
@@ -70,8 +77,9 @@
           </div>
         </div>
 
-        <button type="button" class="submit-button" (click)="postCar()">Post Car</button>
-      </div>
+        <button type="submit" class="submit-button">Post Car</button>
+      </form>
+
     </div>
   </div>
 </div>
