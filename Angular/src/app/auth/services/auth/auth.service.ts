@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-const BASIC_URL = "https://ridebee-env.eba-ts9mn8pe.eu-north-1.elasticbeanstalk.com";
+const BASIC_URL = "http://ridebee-backend-env.eba-8r7pawka.ap-south-1.elasticbeanstalk.com";
 
 @Injectable({
   providedIn: 'root'
